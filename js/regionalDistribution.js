@@ -21,11 +21,11 @@ window.RDViewer = {};
         // mapItems stuff
         dataload = false;
 
-        $.getJSON('https://api.moffpart.com/api/1/databases/sdnacontent/collections/regionalDistribution?q=&apiKey=50e55b5fe4b00738efa04da0&callback=?', function(ret) {
+        $.getJSON('https://api.moffpart.com/api/1/results/getHaplogroup?q=""&c=regionalDistribution&callback=?', function(ret) {
 
             mapItems = ret;
 
-            $.getJSON('https://api.moffpart.com/api/1/databases/sdnacontent/collections/c2Regional?q={"storygroupid":"'+ storygroupid +'"}&apiKey=50e55b5fe4b00738efa04da0&callback=?', function(ret2) {
+            $.getJSON('https://api.moffpart.com/api/1/results/getHaplogroup?q={"storygroupid":"'+ storygroupid +'"}&c=c2Regional&callback=?', function(ret2) {
 
                 distroData = ret2;
                 parseData();
